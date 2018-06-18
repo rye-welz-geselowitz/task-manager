@@ -1,0 +1,15 @@
+div.panel{
+    float: left;
+    margin: 5em;
+}
+
+button#clear-filter{
+    color: #6f9fed;
+    text-transform: uppercase;
+    border: 0;
+}
+
+div.row{
+    border-top: solid 1px gray;
+    height: 4em;
+}

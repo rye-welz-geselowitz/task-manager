@@ -7,7 +7,11 @@ class SelectedGroup extends Component {
       <div>
         <h2>{this.props.data.name}</h2>
         {this.props.data.tasks.map((task)=>{
-            return <Task data ={task}/>
+            return <Task
+                key = {task.id}
+                status = {this.props.taskStateLookup[task.id]}
+                data ={task}
+                toggleTaskCompletion = {this.props.toggleTaskCompletion}/>
         })}
       </div>
     );
