@@ -7,6 +7,7 @@ function hashBy(list, keyName){
     }, {})
 }
 
+//TODO: Test
 function groupBy(list, keyName, constructItem){
     const hashed = hashBy(list, keyName);
     return Object.keys(hashed).reduce((acc, key)=> {
@@ -14,4 +15,4 @@ function groupBy(list, keyName, constructItem){
     }, []);
 }
 
-export { groupBy }
+export { groupBy, hashBy } //TODO: am i using hashBy?
