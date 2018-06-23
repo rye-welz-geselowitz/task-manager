@@ -3,7 +3,7 @@ This project is a coding challenge for Wonderschool.
 
 ## Try it out
 ```
-git clone https://github.com/sarahwelzgeselowitz/task-ui.git
+git clone https://github.com/sarahwelzgeselowitz/task-manager.git
 cd task-manager
 npm install
 npm start
