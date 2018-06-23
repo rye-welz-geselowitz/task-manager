@@ -10,7 +10,7 @@ import {
 /*Takes:
     * task, an object
     * incompleteTasks, a set of integers, representing the ids of incomplete tasks
-Returns::
+Returns:
     * a boolean representing whether a task is dependent on another, incomplete task
 */
 function hasIncompleteDependency(task, incompleteTasks) {
@@ -22,7 +22,7 @@ function hasIncompleteDependency(task, incompleteTasks) {
 /*Takes:
     * task, an object
     * incompleteTasks, a set of integers, representing the ids of incomplete tasks
-Returns::
+Returns:
     * an enum representing whether the task is locked, incomplete, or completed
 */
 function getStatus(task, incompleteTasks) {
@@ -34,7 +34,7 @@ function getStatus(task, incompleteTasks) {
 
 /*Takes:
     * tasks, a list of objects
-Returns::
+Returns:
     * a set of integers, representing the ids of incomplete tasks
 */
 function getIncompleteTaskSet(tasks) {
@@ -47,7 +47,7 @@ function getIncompleteTaskSet(tasks) {
 /*Takes:
     * tasks, a list of objects
     * id, an integer representing the id of the task whose status is to be toggled
-Returns::
+Returns:
     * a list of objects representing the tasks after the specified task is toggled
 */
 function toggleTaskInList(tasks, id) {
@@ -61,7 +61,7 @@ function toggleTaskInList(tasks, id) {
 /*Takes:
     * task, an object
     * incompleteTasks, a set of integers, representing the ids of incomplete tasks
-Returns::
+Returns:
     * an copy of the task object, with the completedAt field updated to reflect its new status
 */
 function toggleTask(task, incompleteTasks) {
