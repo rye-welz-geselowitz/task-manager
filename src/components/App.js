@@ -3,8 +3,7 @@ import CollapsedTaskGroupList from './CollapsedTaskGroupList';
 import ExpandedTaskGroupList from './ExpandedTaskGroupList';
 import TopBar from './TopBar'
 import axios from 'axios';
-import { groupBy } from '../utils';
-import { toggleTaskInList,
+import { toggleTaskInList, getTaskGroups,
     filterTaskGroups, getIncompleteTaskSet } from '../logic/task'
 
 class App extends Component {
@@ -21,11 +20,8 @@ class App extends Component {
     }
     render() {
         const { tasks } = this.state;
-
         if(!tasks){ return <div> Loading... </div> };
-
-        const taskGroups = groupBy(tasks, "group",
-            (k,v)=> {return {name: k, tasks: v}});
+        const taskGroups = getTaskGroups(tasks);
         const incompleteTasks = getIncompleteTaskSet(tasks);
         return (
             <div className="App">
